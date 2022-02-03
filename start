@@ -1,0 +1,17 @@
+#!/bin/bash
+
+_set_bot () {
+    echo "  Downloading source code ..."
+    
+    git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated WhatsAsenaDuplicated
+    
+    echo "Done"
+    
+    cp -rf WhatsAsenaDuplicated/* /root/WhatsAsenaDuplicated
+
+    rm -rf WhatsAsenaDuplicated
+    
+    node bot.js
+}
+
+_set_bot
